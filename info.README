@@ -1,0 +1,24 @@
+Crea una applicazione Java per la gestione di conti bancari. L'applicazione deve includere una classe ContoBancario che permette di effettuare operazioni di deposito e prelievo.
+Tuttavia, ci devono essere controlli per evitare operazioni non valide, lanciando eccezioni custom.
+
+REQUISITI:
+1. Creare una classe ContoBancario con i seguenti attributi:
+	- int numeroConto
+	- String intestatario
+	- double saldo
+2. Metodi nella classe ContoBancario:
+	- void deposita(double importo)
+		- Se l'importo è negativo lancia una eccezione ImportoNonValidoException
+	- void preleva(double importo)
+		- Se l'importo è negativo lancia una eccezione ImportoNonValidoException
+		- Se l'importo è maggiore del saldo disponibile, lancia una eccezione SaldoInsufficienteException
+	- void mostraSaldo()
+		- Stampa il saldo attuale
+3. Creare due eccezioni custom
+	- ImportoNonValidoException (importo negativo)
+	- SaldoInsufficienteException (saldo insufficiente per il prelievo)
+4. Nel metodo main della classe GestionConto:
+	- crea un conto con un saldo iniziale
+	- Prova a effettuare varie operazioni, gestendo le relative eccezioni con blocchi try-catch
+5. Opzionale: scrivi una classe di test unitari per l'applicazione.
+6. Opzionale: carica ed esegui le operazioni di prelievo e deposito da un csv con le colonne: numeroConto, intestatario, saldo, tipoOperazione, importo...
