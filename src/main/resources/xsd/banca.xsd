@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com"
+           xmlns="http://www.example.com"
+           elementFormDefault="qualified">
+
+    <!-- Verifica utente -->
+    <xs:element name="VerificaUtenteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="VerificaUtenteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idCliente" type="xs:long" minOccurs="0"/>
+                <xs:element name="nome" type="xs:string" minOccurs="0"/>
+                <xs:element name="cognome" type="xs:string" minOccurs="0"/>
+                <xs:element name="email" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Operazioni su conto corrente -->
+    <xs:element name="PrelevaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idConto" type="xs:long"/>
+                <xs:element name="importo" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="PrelevaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="esito" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DepositoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idConto" type="xs:long"/>
+                <xs:element name="importo" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DepositoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="esito" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MostraSaldoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idConto" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MostraSaldoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="saldo" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
