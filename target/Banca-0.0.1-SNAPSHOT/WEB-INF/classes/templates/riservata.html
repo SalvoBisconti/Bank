@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+<title>Area riservata</title>
+<link rel="stylesheet" href="css/riservata-style.css">
+</head>
+
+
+<body>
+
+	<div class="form-container">
+		<form action="#" th:action="@{/riservata}" method="post">
+			<div class="form-group">
+				<label for="operazione">Operazione:</label> <select id="operazione"
+					name="operazione" required>
+					<option value="deposito">Deposito</option>
+					<option value="prelievo">Prelievo</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="importo">Importo:</label> <input type="number"
+					id="importo" name="importo" step="0.01" min="0" required>
+			</div>
+
+			<input type="hidden" name="idConto"
+				th:value="${cliente.getId_clnt()}">
+			<div class="form-group">
+				<button type="submit">Esegui Transazione</button>
+			</div>
+		</form>
+	</div>
+
+	<div th:if="${message != null}">
+		<p th:text="${message}" style="color: green;"></p>
+	</div>
+
+	<div class="transactions-container">
+		<h3>Elenco transazioni</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Operazione</th>
+					<th>Importo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr
+					th:each="transazione : ${cliente.getListaCC().get(0).getTransazioni()}">
+					<td
+						th:text="${#dates.format(transazione.data_opz, 'yyyy-MM-dd HH:mm:ss')}"></td>
+
+					<td th:text="${transazione.tipo_opz}"></td>
+					<td th:text="${transazione.importo}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+</body>
+
+</html>

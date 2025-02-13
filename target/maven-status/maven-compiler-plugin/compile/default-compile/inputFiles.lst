@@ -1,6 +1,4 @@
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/BancaApplication.java
-/Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/ContoBancario.java
-/Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/MainApplication.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/ServletInitializer.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/config/WebServiceConfig.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/controller/LoginController.java
@@ -15,7 +13,6 @@
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/service/ContoCorrenteService.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/soapService/BancaSoapService.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/utils/ImportoNonValidoException.java
-/Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/utils/ReaderCSVFile.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/advancia/stage/Banca/utils/SaldoInsufficienteException.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/example/DepositoRequest.java
 /Users/salvo/eclipse-workspace-advancia/Banca/src/main/java/com/example/DepositoResponse.java
